@@ -54,7 +54,7 @@ def login():
 			'u':username,
 			'p':password,
 			'once':once,	
-			#'next':"/"
+			'next':"/"
 			}
 	
 	header = {'Host':'www.v2ex.com','Origin':'http://www.v2ex.com','Referer':'http://www.v2ex.com/signin','User-Agent':"Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/32.0.1700.107 Chrome/32.0.1700.107 Safari/537.36"}
@@ -66,7 +66,7 @@ def login():
 
 	#print response.getcode()
 	#登录成功，会有对应的auth值
-	if not 'auth' in [c.name for c in cookie]:
+	if not 'A2' in [c.name for c in cookie]:
 		raise ValueError,"登录失败！"
 		
 def if_get():
